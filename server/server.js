@@ -841,10 +841,8 @@ if (fs.existsSync(clientDist)) {
   });
 }
 
-if (!process.env.VERCEL) {
-  app.listen(PORT, () => {
-    console.log(`KasKita backend server running on http://localhost:${PORT}`);
-  });
-}
+app.listen(PORT, () => {
+  console.log(`KasKita backend server running on port ${PORT}`);
+});
 
 export default app;
