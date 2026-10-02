@@ -1,4 +1,4 @@
-# KasKita - Organization & Cash Management
+
 
 Aplikasi web manajemen uang kas dan organisasi lengkap (Frontend & Backend) dengan antarmuka modern yang dibuat persis sesuai referensi desain **KasKita** (*Komunitas Toba*).
 
@@ -128,3 +128,5 @@ Database disimpan di file `server/kaskita.db` dengan tabel-tabel berikut:
 - `meeting_attendance`: Presensi per pertemuan per anggota.
 - `agendas`: Daftar program kerja dan status tugas.
 - `documentations`: Galeri foto kegiatan dan bukti nota pembayaran.
+=======
+
