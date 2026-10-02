@@ -19,7 +19,8 @@ app.use(cors());
 app.use(express.json());
 
 // Setup uploads directory for receipt / proof uploads
-const uploadsDir = path.join(__dirname, 'uploads');
+const isVercel = Boolean(process.env.VERCEL);
+const uploadsDir = isVercel ? '/tmp/uploads' : path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
@@ -840,6 +841,10 @@ if (fs.existsSync(clientDist)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`KasKita backend server running on http://localhost:${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`KasKita backend server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
