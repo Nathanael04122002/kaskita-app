@@ -1,6 +1,6 @@
 import React from 'react';
 import { DollarSign, Users, FolderOpen, X } from 'lucide-react';
-import logoOnFire from '../assets/logo on fire.jpeg';
+import logoOnFire from '../assets/logo_domain.png';
 
 export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen, darkMode, setDarkMode }) {
   const navItems = [
