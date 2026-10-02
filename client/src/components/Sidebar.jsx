@@ -1,5 +1,6 @@
 import React from 'react';
 import { DollarSign, Users, FolderOpen, X } from 'lucide-react';
+import logoOnFire from '../assets/logo on fire.jpeg';
 
 export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen, darkMode, setDarkMode }) {
   const navItems = [
@@ -55,12 +56,16 @@ export default function Sidebar({ activeTab, setActiveTab, isOpen, setIsOpen, da
         <div className="px-5 pt-6 pb-4 flex items-center justify-between border-b border-slate-800/60">
           <div>
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <DollarSign className="w-4 h-4 text-white" />
-              </div>
+              <img
+                src={logoOnFire}
+                alt="ON FIRE Logo"
+                className="w-9 h-9 rounded-xl object-cover shadow-md shadow-orange-500/20 ring-2 ring-orange-500/30"
+              />
               <div>
-                <h1 className="text-lg font-bold text-white tracking-tight leading-none">KasKita</h1>
-                <p className="text-[10px] text-slate-500 mt-0.5">Pencatatan Kas</p>
+                <h1 className="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-red-500 tracking-tight leading-none">
+                  ON FIRE
+                </h1>
+                <p className="text-[10px] text-slate-400 mt-0.5 font-medium">Grup Rohani</p>
               </div>
             </div>
           </div>

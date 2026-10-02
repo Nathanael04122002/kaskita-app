@@ -20,14 +20,14 @@ export function initDatabase() {
   db.exec(`
     CREATE TABLE IF NOT EXISTS settings (
       id INTEGER PRIMARY KEY,
-      org_name TEXT NOT NULL DEFAULT 'Komunitas Toba',
-      org_tagline TEXT DEFAULT 'Organization Management',
+      org_name TEXT NOT NULL DEFAULT 'ON FIRE',
+      org_tagline TEXT DEFAULT 'Grup Rohani Management',
       weekly_dues INTEGER DEFAULT 25000,
       currency TEXT DEFAULT 'Rp',
       user_name TEXT DEFAULT 'Natanael Christianto',
       user_initials TEXT DEFAULT 'NC',
       user_role TEXT DEFAULT 'Bendahara Umum',
-      user_email TEXT DEFAULT 'natanael@kaskita.id',
+      user_email TEXT DEFAULT 'natanael@onfire.id',
       user_phone TEXT DEFAULT '+62 812-8899-7711',
       theme TEXT DEFAULT 'light'
     );
@@ -137,7 +137,7 @@ function seedDefaultData() {
   if (settingsCount === 0) {
     db.prepare(`
       INSERT INTO settings (id, org_name, org_tagline, weekly_dues, currency, user_name, user_initials, user_role, user_email, user_phone)
-      VALUES (1, 'Komunitas Toba', 'Organization Management', 25000, 'Rp', 'Natanael Christianto', 'NC', 'Bendahara', 'natanael@kaskita.id', '+62 812-8899-7711')
+      VALUES (1, 'ON FIRE', 'Grup Rohani Management', 25000, 'Rp', 'Natanael Christianto', 'NC', 'Bendahara', 'natanael@onfire.id', '+62 812-8899-7711')
     `).run();
   }
 
