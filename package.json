@@ -1,0 +1,21 @@
+{
+  "name": "kaskita-root",
+  "version": "1.0.0",
+  "description": "KaskiTa_OnFire",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "build:client": "npm --prefix client run build",
+    "start": "node server/server.js",
+    "reset-db": "node -e \"import('./server/database.js').then(m => { const db = m.default; db.pragma('foreign_keys=OFF'); db.exec('DROP TABLE IF EXISTS meeting_attendance; DROP TABLE IF EXISTS transactions; DROP TABLE IF EXISTS meetings; DROP TABLE IF EXISTS agendas; DROP TABLE IF EXISTS documentations; DROP TABLE IF EXISTS members; DROP TABLE IF EXISTS settings;'); db.pragma('foreign_keys=ON'); m.initDatabase(); console.log('Database reset complete.'); })\""
+  },
+  "keywords": [
+    "kaskita",
+    "uang-kas",
+    "cash-flow",
+    "organization-management"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
